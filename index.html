@@ -1,0 +1,413 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+        <script src="main.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">My<span>Portfolio</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Mafojuewo Oluwademilade</h1>
+                <p>Senior Frontend Developer | UI/UX Enthusiast</p>
+                <p>Building beautiful, responsive, and user-friendly web applications</p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="maf.jpg" alt="Mafojuewo Oluwademilade">
+                </div>
+                <div class="about-text">
+                    <h3>Who am I?</h3>
+                    <p>I'm a passionate frontend developer with a strong focus on creating engaging user experiences. I recently graduated from the Advanced Frontend Certification Course at New Horizons and am now preparing for my dream job at Tech-Genie International.</p>
+                    <p>My journey in web development began 3 years ago when I built my first website. Since then, I've fallen in love with the process of turning ideas into interactive realities.</p>
+                    <p>When I'm not coding, you can find me hiking in nature, reading tech blogs, or experimenting with new design tools.</p>
+                    <div class="skills-list">
+                        <span class="skill-item">HTML5</span>
+                        <span class="skill-item">CSS3</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">Responsive Design</span>
+                        <span class="skill-item">UI/UX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                <button class="filter-btn" data-filter="webapp">Web Apps</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Age Calculator Project -->
+                <div class="project-card" data-category="javascript">
+                    <div class="project-img">
+                        <img src="Agecalc.png" alt="Age Calculator">
+                    </div>
+                    <div class="project-info">
+                        <h3>Age Calculator</h3>
+                        <p>A simple tool that calculates your exact age based on your birth date input.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#age-calculator-demo" class="demo-link">Live Demo</a>
+                            <a href="https://github.com/yourusername/age-calculator" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dice Roll Simulator Project -->
+                <div class="project-card" data-category="javascript">
+                    <div class="project-img">
+                        <img src="rolldice.jpg" alt="Dice Roll Simulator">
+                    </div>
+                    <div class="project-info">
+                        <h3>Dice Roll Simulator</h3>
+                        <p>An interactive dice rolling application that keeps history of previous rolls.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">DOM Manipulation</span>
+                            <span class="tech-tag">CSS Animations</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#dice-roller-demo" class="demo-link" onclick="initDiceRoller(); return false;">Live Demo</a>
+                            <a href="https://github.com/yourusername/dice-roller" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age Calculator Demo Modal -->
+    <div id="age-calculator-demo" class="project-demo-modal">
+        <div class="demo-content">
+            <span class="close-demo">&times;</span>
+            <div class="demo-container">
+                <h2>Age Calculator</h2>
+                <div class="form">
+                    <label for="birthday">Enter your date of birth</label>
+                    <input type="date" id="birthday" name="birthday">
+                    <button id="age-calc-btn">Calculate Age</button>
+                    <p id="age-result">Your age will appear here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dice Roller Demo Modal -->
+    <div id="dice-roller-demo" class="project-demo-modal">
+        <div class="demo-content">
+            <span class="close-demo">&times;</span>
+            <div class="demo-container">
+                <h2>Dice Roll Simulator</h2>
+                <div class="dice" id="dice">&#9860;</div>
+                <button id="roll-button" href="https://demo.100jsprojects.com/dice-roll-simulator">Roll Dice</button>
+                <ul id="roll-history"></ul>
+            </div>
+        </div>
+    </div>
+
+     
+    </div>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skill-item-progress">
+                        <div class="skill-info">
+                            <span class="skill-name">HTML5</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item-progress">
+                        <div class="skill-info">
+                            <span class="skill-name">CSS3</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item-progress">
+                        <div class="skill-info">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item-progress">
+                        <div class="skill-info">
+                            <span class="skill-name">Responsive Design</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-item-progress">
+                        <div class="skill-info">
+                            <span class="skill-name">React</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item-progress">
+                        <div class="skill-info">
+                            <span class="skill-name">Bootstrap</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item-progress">
+                        <div class="skill-info">
+                            <span class="skill-name">jQuery</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item-progress">
+                        <div class="skill-info">
+                            <span class="skill-name">Sass</span>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tools & Other</h3>
+                    <div class="skill-item-progress">
+                        <div class="skill-info">
+                            <span class="skill-name">Git</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item-progress">
+                        <div class="skill-info">
+                            <span class="skill-name">Figma</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item-progress">
+                        <div class="skill-info">
+                            <span class="skill-name">Photoshop</span>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item-progress">
+                        <div class="skill-info">
+                            <span class="skill-name">VS Code</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title">My Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - Present</div>
+                        <h3>New Horizons ICT</h3>
+                        <p><strong>Advanced Frontend Certification Course</strong></p>
+                        <p>Completed intensive training in modern frontend development technologies including HTML5, CSS3, JavaScript, and responsive design principles.</p>
+                        <p>Developed multiple projects showcasing proficiency in frontend frameworks and best practices.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 - 2023</div>
+                        <h3>Web Developer Intern</h3>
+                        <p><strong>Digital Solutions Inc.</strong></p>
+                        <p>Assisted in developing and maintaining client websites using HTML, CSS, and JavaScript.</p>
+                        <p>Collaborated with design team to implement responsive layouts and UI components.</p>
+                        <p>Participated in code reviews and learned industry best practices.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019 - 2021</div>
+                        <h3>Freelance Web Designer</h3>
+                        <p>Designed and developed websites for small businesses and personal clients.</p>
+                        <p>Created custom WordPress themes and plugins to meet client requirements.</p>
+                        <p>Managed all aspects of projects from initial consultation to final deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Lagos, Nigeria</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>greatmaf01@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+234(0)9059467715</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/demmymaf" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://x.com/demmymaf?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="error" id="name-error">Please enter your name</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error" id="email-error">Please enter a valid email</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                            <div class="error" id="message-error">Please enter your message</div>
+                        </div>
+                        <button type="submit" class="form-submit">Send Message</button>
+                        <div class="success-message" id="success-message">
+                            Your message has been sent successfully!
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="logo">My<span>Portfolio</span></a>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <a href="#home" class="back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+                <div class="copyright">
+                    &copy; <span id="year"></span> Mafojuewo Oluwademilade
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
